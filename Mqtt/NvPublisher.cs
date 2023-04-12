@@ -1,5 +1,5 @@
 ﻿using MqttLibrary;
-using MqttLibrary.UnManaged;
+using MqttLibrary.Managed;
 using MQTTnet;
 using MQTTnet.Protocol;
 
@@ -22,14 +22,12 @@ class NvPublisher
              return Task.CompletedTask; };
         client.DisconnectedAsync += e => { Console.WriteLine("DisConnected to the broker successfully"); return Task.CompletedTask; };
 
-        await ClientBase.ConnectClientAsync(client, options);
+        await ClientBase.StartAsync(client, options);
 
         Console.WriteLine("nhap");
         Console.ReadLine();
 
-        await Publisher.PublishAsync(client,"home","helo",MqttQualityOfServiceLevel.AtLeastOnce);
-
-        await ClientBase.DisconnectClientAsync(client);
+        await Publisher.EnqueueAsync(client,"home","helo",MqttQualityOfServiceLevel.AtLeastOnce);
 
         Console.ReadLine();
     }

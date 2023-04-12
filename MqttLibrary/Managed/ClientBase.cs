@@ -17,11 +17,12 @@ public class ClientBase
         IManagedMqttClient managedMqttClient = factory.CreateManagedMqttClient();
         return managedMqttClient;
     }
-    public static ManagedMqttClientOptions OptionBuilder(MqttClientOptions mqttClientOptions,Configuration configuration)
+    public static ManagedMqttClientOptions OptionBuilder(Configuration configuration)
     {
+        var option = UnManaged.ClientBase.OptionBuilder(configuration);
         ManagedMqttClientOptions managedMqttClientOptions = new ManagedMqttClientOptionsBuilder()
             .WithAutoReconnectDelay(TimeSpan.FromSeconds(5))
-            .WithClientOptions(mqttClientOptions)
+            .WithClientOptions(option)
             .Build();
             
         return managedMqttClientOptions;

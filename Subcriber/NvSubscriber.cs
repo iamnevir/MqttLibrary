@@ -1,5 +1,5 @@
 ﻿using MqttLibrary;
-using MqttLibrary.UnManaged;
+using MqttLibrary.Managed;
 using MQTTnet;
 using MQTTnet.Protocol;
 using System.Text;
@@ -10,7 +10,6 @@ class NvSubscriber
     static async Task Main(string[] args)
     {
         var configManager = ConfigManager<Configuration>.Instance.Config;
-
         var options = ClientBase.OptionBuilder(configManager);
 
         var client = ClientBase.CreateAsync();
@@ -33,10 +32,8 @@ class NvSubscriber
             return Task.CompletedTask;
         };
 
-        await ClientBase.ConnectClientAsync(client, options);
+        await ClientBase.StartAsync(client, options);
         
         Console.ReadLine();
-
-        await ClientBase.DisconnectClientAsync(client);
     }
 }

@@ -17,3 +17,5 @@ C:\Users\ASUS\source\repos\Mqtt\Mqtt\obj\Debug\net6.0\NvPublisher.genruntimeconf
 C:\Users\ASUS\source\repos\Mqtt\Mqtt\obj\Debug\net6.0\ref\NvPublisher.dll
 C:\Users\ASUS\source\repos\Mqtt\Mqtt\bin\Debug\net6.0\MqttLibrary.dll
 C:\Users\ASUS\source\repos\Mqtt\Mqtt\bin\Debug\net6.0\MqttLibrary.pdb
+C:\Users\ASUS\source\repos\Mqtt\Mqtt\bin\Debug\net6.0\MQTTnet.Extensions.ManagedClient.dll
+C:\Users\ASUS\source\repos\Mqtt\Mqtt\bin\Debug\net6.0\MQTTnet.Extensions.Rpc.dll
