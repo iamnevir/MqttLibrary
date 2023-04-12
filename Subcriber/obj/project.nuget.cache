@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TU+el62HbqrolAbcigXAQBc5TbSmG6kYo7xzshVvKhlqzeNnOAff62SpjhRC+7z6fLZq+RXw9Ulxuh++KNxuVg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Mqtt\\Subcriber\\NvSubscriber.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet\\4.1.4.563\\mqttnet.4.1.4.563.nupkg.sha512"
+  ],
+  "logs": []
+}

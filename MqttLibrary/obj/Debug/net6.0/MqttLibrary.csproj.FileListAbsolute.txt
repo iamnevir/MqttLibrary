@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\bin\Debug\net6.0\MqttLibrary.deps.json
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\bin\Debug\net6.0\MqttLibrary.dll
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\bin\Debug\net6.0\MqttLibrary.pdb
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.dll
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\refint\MqttLibrary.dll
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\MqttLibrary.pdb
+C:\Users\ASUS\source\repos\Mqtt\MqttLibrary\obj\Debug\net6.0\ref\MqttLibrary.dll
