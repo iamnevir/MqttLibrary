@@ -1,17 +1,21 @@
 ﻿using MQTTnet.Client;
 using MQTTnet;
-using MqttLibrary.Configuration;
 using MQTTnet.Server;
+using MQTTnet.Protocol;
+using System.Text;
 
 namespace MqttLibrary.UnManaged;
 
 public class Publisher
 {
-
-    public static async Task PublishApplicationMessage(IMqttClient mqttClient, MqttApplicationMessage applicationMessage)
+    public static async Task PublishAsync(IMqttClient mqttClient, string topic, string payload, MqttQualityOfServiceLevel mqttQualityOfServiceLevel)
     {
         ClientBase.CheckConnected(mqttClient);
-        await mqttClient.PublishAsync(applicationMessage, CancellationToken.None);
+        var mqttApplicationMessage = new MqttApplicationMessageBuilder()
+            .WithQualityOfServiceLevel(mqttQualityOfServiceLevel)
+            .WithTopic(topic)
+            .WithPayload(Encoding.UTF8.GetBytes(payload))
+            .Build();
+        await mqttClient.PublishAsync(mqttApplicationMessage, CancellationToken.None);
     }
-
 }

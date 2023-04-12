@@ -1,7 +1,7 @@
 ﻿using MqttLibrary;
-using MqttLibrary.Configuration;
 using MqttLibrary.UnManaged;
 using MQTTnet;
+using MQTTnet.Protocol;
 using System.Text;
 
 namespace NvSubscriber;
@@ -10,18 +10,20 @@ class NvSubscriber
     static async Task Main(string[] args)
     {
         var configManager = ConfigManager<Configuration>.Instance.Config;
+
         var options = ClientBase.OptionBuilder(configManager);
+
         var client = ClientBase.CreateAsync();
+
         client.ConnectedAsync += async e =>
         {
             Console.WriteLine("Connected to the broker successfully");
-            var topicFilter = new MqttTopicFilterBuilder().WithTopic("Home/Temp").Build();
-            await Subscriber.Subscribe_Topic(client, topicFilter);
+            await Subscriber.SubscribeAsync(client, "home",MqttQualityOfServiceLevel.AtLeastOnce);
         };
 
         client.ApplicationMessageReceivedAsync += e =>
         {
-            Console.WriteLine($"Received Message - {Encoding.UTF8.GetString(e.ApplicationMessage.Payload)}");
+            Console.WriteLine($"Nhận tin nhắn - {Encoding.UTF8.GetString(e.ApplicationMessage.Payload)}");
             return Task.CompletedTask;
         };
 

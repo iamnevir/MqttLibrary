@@ -48,6 +48,14 @@
             "MQTTnet": {
               "target": "Package",
               "version": "[4.1.4.563, )"
+            },
+            "MQTTnet.Extensions.ManagedClient": {
+              "target": "Package",
+              "version": "[4.1.4.563, )"
+            },
+            "MQTTnet.Extensions.Rpc": {
+              "target": "Package",
+              "version": "[4.1.4.563, )"
             }
           },
           "imports": [

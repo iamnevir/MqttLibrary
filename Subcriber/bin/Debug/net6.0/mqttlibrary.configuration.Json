@@ -1,0 +1,1 @@
+{"UserName":"","Password":"","HostServer":"test.mosquitto.org","Port":1883,"BufferSize":8192,"MaximumQualityOfService":0,"KeepAliveSecs":0,"WaitTimeoutSecs":5,"ConnectionTimeoutSecs":5,"AllowWildcardsInTopicFilters":true}

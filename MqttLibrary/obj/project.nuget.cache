@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/6LUe1C+UZ11NGl2kJY/dC8MebnXj5lAjHvwFlIkKzFROvCxTb0b4ezpdfIO8Y4oh7wTEXRJeBrp5Ji0FO1y+w==",
+  "dgSpecHash": "kw992Anr9H4MIN9+zWP0GP/vePLIgqTJ/8k640Om0wsDTP4WUBF181JETYUxubL/B7k7WzdKDWvVjTHNYLbN4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Mqtt\\MqttLibrary\\MqttLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet\\4.1.4.563\\mqttnet.4.1.4.563.nupkg.sha512"
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet\\4.1.4.563\\mqttnet.4.1.4.563.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet.extensions.managedclient\\4.1.4.563\\mqttnet.extensions.managedclient.4.1.4.563.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet.extensions.rpc\\4.1.4.563\\mqttnet.extensions.rpc.4.1.4.563.nupkg.sha512"
   ],
   "logs": []
 }
