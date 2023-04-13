@@ -11,20 +11,19 @@ public class ClientBase
         if (!managedMqttClient.IsConnected)
             throw new Exception("Client does not connected!");
     }
-    public static IManagedMqttClient CreateAsync()
+    public static IManagedMqttClient CreateMqttClient()
     {
         var factory = new MqttFactory();
         IManagedMqttClient managedMqttClient = factory.CreateManagedMqttClient();
         return managedMqttClient;
     }
-    public static ManagedMqttClientOptions OptionBuilder(Configuration configuration)
+    public static ManagedMqttClientOptions CreateMqttClientOptions(Configuration configuration)
     {
-        var option = UnManaged.ClientBase.OptionBuilder(configuration);
+        var option = UnManaged.ClientBase.CreateMqttClientOptions(configuration);
         ManagedMqttClientOptions managedMqttClientOptions = new ManagedMqttClientOptionsBuilder()
             .WithAutoReconnectDelay(TimeSpan.FromSeconds(5))
             .WithClientOptions(option)
             .Build();
-            
         return managedMqttClientOptions;
     }
     

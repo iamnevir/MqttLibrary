@@ -1,33 +1,25 @@
 ﻿using MqttLibrary;
-using MqttLibrary.Managed;
-using MQTTnet;
 using MQTTnet.Protocol;
+using MqttLibrary.Managed;
 
 namespace NvPublisher;
 class NvPublisher
 {
-    static async Task Main(string[] args)
+    static async Task Main()
     {
         var configManager = ConfigManager<Configuration>.Instance.Config;
 
-        var options = ClientBase.OptionBuilder(configManager);
+        var options = ClientBase.CreateMqttClientOptions(configManager);
 
-        var client = ClientBase.CreateAsync();
-
-        client.ConnectedAsync += e => {
-            if (client.IsConnected)
-            {
-                Console.WriteLine("Connected to the broker successfully");
-            }
-             return Task.CompletedTask; };
-        client.DisconnectedAsync += e => { Console.WriteLine("DisConnected to the broker successfully"); return Task.CompletedTask; };
+        var client = ClientBase.CreateMqttClient();
 
         await ClientBase.StartAsync(client, options);
 
-        Console.WriteLine("nhap");
+        Console.WriteLine("Press any key");
+
         Console.ReadLine();
 
-        await Publisher.EnqueueAsync(client,"home","helo",MqttQualityOfServiceLevel.AtLeastOnce);
+        await Publisher.EnqueueAsync(client, "home", "helo world", MqttQualityOfServiceLevel.AtLeastOnce);
 
         Console.ReadLine();
     }

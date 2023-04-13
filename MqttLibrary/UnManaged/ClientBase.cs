@@ -1,25 +1,23 @@
 ﻿using MQTTnet.Client;
 using MQTTnet;
-using MQTTnet.Server;
-using MQTTnet.Protocol;
-using System.Diagnostics;
 
 namespace MqttLibrary.UnManaged;
 
 public class ClientBase
 {
+
     public static void CheckConnected(IMqttClient mqttClient)
     {
         if (!mqttClient.IsConnected)
             throw new Exception("Client does not connected!");
     }
-    public static IMqttClient CreateAsync()
+    public static IMqttClient CreateMqttClient()
     {
         var factory = new MqttFactory();
         IMqttClient mqttClient = factory.CreateMqttClient();
         return mqttClient;
     }
-    public static MqttClientOptions OptionBuilder(Configuration configuration)
+    public static MqttClientOptions CreateMqttClientOptions(Configuration configuration)
     {
         MqttClientOptions mqttClientOptions = new MqttClientOptionsBuilder()
             .WithTcpServer(configuration.HostServer, configuration.Port)

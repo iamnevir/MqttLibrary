@@ -19,13 +19,9 @@ public class Subscriber
         };
         await managedMqttClient.SubscribeAsync(mqttTopicFilters);
     }
-    public static async Task UnSubscribesAsync(IManagedMqttClient managedMqttClient, string topic)
+    public static async Task UnSubscribesAsync(IManagedMqttClient managedMqttClient, ICollection<string> topics )
     {
         ClientBase.CheckConnected(managedMqttClient);
-        ICollection<string> topics = new List<string>
-        {
-            topic
-        };
         await managedMqttClient.UnsubscribeAsync(topics);
     }
     public static async Task UnSubscribeAsync(IManagedMqttClient managedMqttClient, string topic)
