@@ -6,7 +6,7 @@ namespace MqttLibrary.Rpc;
 
 public static class Extension
 {
-    public static async Task ExecuteAsync(this IMqttRpcClient client, TimeSpan timeout, string methodName, string payload, MqttQualityOfServiceLevel qualityOfServiceLevel)
+    public static async Task ExecuteAsync(IMqttRpcClient client, TimeSpan timeout, string methodName, string payload, MqttQualityOfServiceLevel qualityOfServiceLevel)
     {
         await MqttRpcClientExtensions.ExecuteAsync(client, timeout, methodName, payload, qualityOfServiceLevel);
     }
