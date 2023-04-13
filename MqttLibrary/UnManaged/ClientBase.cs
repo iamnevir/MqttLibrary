@@ -28,11 +28,11 @@ public class ClientBase
         return mqttClientOptions;
     }
 
-    public static async Task DisconnectClientAsync(IMqttClient mqttClient)
+    public static async Task DisconnectAsync(IMqttClient mqttClient)
     {
         await mqttClient.DisconnectAsync(new MqttClientDisconnectOptionsBuilder().WithReason(MqttClientDisconnectReason.NormalDisconnection).Build());
     }
-    public static async Task ConnectClientAsync(IMqttClient mqttClient, MqttClientOptions mqttClientOptions)
+    public static async Task ConnectAsync(IMqttClient mqttClient, MqttClientOptions mqttClientOptions)
     {
         await mqttClient.ConnectAsync(mqttClientOptions, CancellationToken.None);
     }

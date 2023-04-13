@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RDKUbtG/iWXOVcT8RMWcqSuKIUQREGNntlnTYy4IlbDuCNP/UgBAEL70hrHDbhmMTplM5eS7sA1eFqbRxGHOGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Mqtt\\RpcTest\\RpcTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet\\4.1.4.563\\mqttnet.4.1.4.563.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet.extensions.managedclient\\4.1.4.563\\mqttnet.extensions.managedclient.4.1.4.563.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mqttnet.extensions.rpc\\4.1.4.563\\mqttnet.extensions.rpc.4.1.4.563.nupkg.sha512"
+  ],
+  "logs": []
+}
