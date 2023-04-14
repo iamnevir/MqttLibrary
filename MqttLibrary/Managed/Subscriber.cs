@@ -9,6 +9,11 @@ namespace MqttLibrary.Managed;
 public class Subscriber
 {
 
+    public static async Task SubscribeAsync(IManagedMqttClient managedMqttClient, ICollection<MqttTopicFilter> mqttTopicFilters, MqttQualityOfServiceLevel mqttQualityOfServiceLevel)
+    {
+        ClientBase.CheckConnected(managedMqttClient);
+        await managedMqttClient.SubscribeAsync(mqttTopicFilters);
+    }
     public static async Task SubscribeAsync(IManagedMqttClient managedMqttClient, string topic, MqttQualityOfServiceLevel mqttQualityOfServiceLevel)
     {
         ClientBase.CheckConnected(managedMqttClient);

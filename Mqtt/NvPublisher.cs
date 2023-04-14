@@ -15,7 +15,7 @@ class NvPublisher
 
         await ClientBase.StartAsync(client, options);
 
-        Console.WriteLine("Press any key");
+        Console.WriteLine("Press enter to publish");
 
         Console.ReadLine();
 
